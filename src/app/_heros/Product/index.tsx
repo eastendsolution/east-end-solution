@@ -14,7 +14,7 @@ export const ProductHero: React.FC<{
   const { title, categories, meta: { image: metaImage, description } = {} } = product
 
   return (
-    <section className={classes.productHero}>
+    <Gutter className={classes.productHero}>
       <div className={classes.mediaWrapper}>
         {!metaImage && <div className={classes.placeholder}>No image</div>}
         {metaImage && typeof metaImage !== 'string' && (
@@ -53,6 +53,6 @@ export const ProductHero: React.FC<{
 
         <AddToCartButton product={product} className={classes.addToCartButton} />
       </div>
-    </section>
+    </Gutter>
   )
 }
